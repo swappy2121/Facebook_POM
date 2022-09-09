@@ -56,11 +56,13 @@ public class LogInPage extends BaseClass {
         logInBtn2 = driver.findElement(By.name("login"));
         return logInBtn2.isEnabled();
     }
-     public boolean verifyLogInField(String UN , String passW) {
+     public HomePage verifyLogInField(String UN , String passW) {
          userId1 = driver.findElement(By.name("email"));
          pass1 = driver.findElement(By.id("pass"));
+         logInBtn1 = driver.findElement(By.name("login"));
          userId1.sendKeys(UN);
          pass1.sendKeys(passW);
-        return true;
+         logInBtn1.click();
+        return new HomePage();
     }
 }
