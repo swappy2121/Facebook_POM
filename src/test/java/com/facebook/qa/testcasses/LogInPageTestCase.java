@@ -67,9 +67,7 @@ public class LogInPageTestCase extends LogInPage {
     }
      @Test(priority = 11)
     public void verifyLogInField(){
-        testBase();
-       boolean loggedIn = verifyLogInField(prop.getProperty("username"), prop.getProperty("password"));
-       Assert.assertTrue(loggedIn);
+       HomePage homepage = verifyLogInField("sopiakshu25@gmail.com", "Sopi@1234");
     }
     @AfterTest
     public void closeBrowsers(){
