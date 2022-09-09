@@ -65,6 +65,12 @@ public class LogInPageTestCase extends LogInPage {
         boolean button2 = verifyLogInBtn2();
         Assert.assertTrue(button2);
     }
+     @Test(priority = 11)
+    public void verifyLogInField(){
+        testBase();
+       boolean loggedIn = verifyLogInField(prop.getProperty("username"), prop.getProperty("password"));
+       Assert.assertTrue(loggedIn);
+    }
     @AfterTest
     public void closeBrowsers(){
         driver.quit();
