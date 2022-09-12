@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FREE CRM Application Test Automation Test Suite">
+
+    <listeners>
+        <listener class-name="com.qa.extentreportlistener.TestNG_Listener" />
+        <listener class-name="com.qa.extentreportlistener.ExtentReportNG" />
+    </listeners>
+
+
+    <test name="Facebook App Test Cases">
+        <classes>
+            <class name="com.facebook.qa.testcasses.LogInPageTestCase"></class>
+            <class name="com.facebook.qa.testcasses.SignUpPageTestCase"></class>
+            <class name="com.facebook.qa.testcasses.HomePageTestCase"></class>
+            <class name="com.facebook.qa.testcasses.MenuPageTestCase"></class>
+            <class name="com.facebook.qa.testcasses.ProfilePageTestCase"></class>
+            <class name="com.facebook.qa.testcasses.SettingPageTestCase"></class>
+        </classes>
+    </test>
+</suite>
