@@ -16,46 +16,49 @@ public class MenuPage extends BaseClass {
     public static WebElement gaming;
     public static WebElement bloodDonation;
 
-
-
     public boolean verifyFacebookLogo() {
         fbLogo = driver.findElement(By.xpath("(//img[contains(@src,'https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/GavNGH1v5-z.png')])[1]"));
         return fbLogo.isDisplayed();
     }
-    public String verifyWelcomeField() {
-        welcome = driver.findElement(By.xpath("(//span[contains(@class,'gvxzyvdx aeinzg81 t7p7dqev gh25dzvf exr7barw b6ax4al1 gem102v4 ncib64c9 mrvwc6qr sx8pxkcf f597kf1v cpcgwwas m2nijcs8 hxfwr5lz k1z55t6l oog5qr5w tpi2lg9u pbevjfx6 ztn2w49o')])[1]"));
-        return welcome.getAttribute("class");
+    public boolean verifyWelcomeField() {
+        welcome = driver.findElement(By.xpath("(//img[contains(@class,'gneimcpu p9wrh9lq')])[3]"));
+        return welcome.isDisplayed();
     }
     public String verifyEventField() {
         event = driver.findElement(By.xpath("(//span[contains(@class,'gvxzyvdx aeinzg81 t7p7dqev gh25dzvf exr7barw b6ax4al1 gem102v4 ncib64c9 mrvwc6qr sx8pxkcf f597kf1v cpcgwwas m2nijcs8 hxfwr5lz k1z55t6l oog5qr5w tpi2lg9u pbevjfx6 ztn2w49o')])[2]"));
-        return event.getAttribute("class");
+        WebElement searchEvent = driver.findElement(By.xpath("(//input[contains(@class,'qi72231t s3jn8y49 k14qyeqv mz1h5j5e ztn2w49o s19c0p35 febi1ev9 pccvoycu c84hr6m5 losq46hw qgrdou9d nu7423ey n3hqoq4p r86q59rh b3qcqh3k fq87ekyn f92fqwvt cavyzvzu bbgqxxx1 j4vk3mq5 bdao358l pbevjfx6 tgm57n0e cgu29s5g i15ihif8 no6h3tfh k1z55t6l aeinzg81 icdlwmnq om3e55n1 rh5b4hnh gy87pps4 i5oewl5a r9fxt90l nnzkd6d7 jvc6uz2b adj1mh9s h7nzrzxv gl9yfm1p ap9gnrge k4z0jo6w')])"));
+        if(event.isEnabled()){
+            event.click();
+        }
+        searchEvent.sendKeys("funny videos");
+        return searchEvent.getAttribute("value");
     }
-    public String verifyFindFriendsField() {
+    public boolean verifyFindFriendsField() {
         FindFriends = driver.findElement(By.xpath("(//span[contains(@class,'gvxzyvdx aeinzg81 t7p7dqev gh25dzvf exr7barw b6ax4al1 gem102v4 ncib64c9 mrvwc6qr sx8pxkcf f597kf1v cpcgwwas m2nijcs8 hxfwr5lz k1z55t6l oog5qr5w tpi2lg9u pbevjfx6 ztn2w49o')])[3]"));
-        return FindFriends.getAttribute("class");
+        return FindFriends.isEnabled();
     }
-    public String verifyGroupsField() {
+    public boolean verifyGroupsField() {
         groups = driver.findElement(By.xpath("(//span[contains(@class,'gvxzyvdx aeinzg81 t7p7dqev gh25dzvf exr7barw b6ax4al1 gem102v4 ncib64c9 mrvwc6qr sx8pxkcf f597kf1v cpcgwwas m2nijcs8 hxfwr5lz k1z55t6l oog5qr5w tpi2lg9u pbevjfx6 ztn2w49o')])[4]"));
-        return groups.getAttribute("class");
+        return groups.isEnabled();
     }
-    public String verifyNewsField() {
+    public boolean verifyNewsField() {
         news = driver.findElement(By.xpath("(//span[contains(@class,'gvxzyvdx aeinzg81 t7p7dqev gh25dzvf exr7barw b6ax4al1 gem102v4 ncib64c9 mrvwc6qr sx8pxkcf f597kf1v cpcgwwas m2nijcs8 hxfwr5lz k1z55t6l oog5qr5w tpi2lg9u pbevjfx6 ztn2w49o')])[5]"));
-        return news.getAttribute("class");
+        return news.isDisplayed();
     }
-    public String verifyFavouritesField() {
+    public boolean verifyFavouritesField() {
         favourites = driver.findElement(By.xpath("(//span[contains(@class,'gvxzyvdx aeinzg81 t7p7dqev gh25dzvf exr7barw b6ax4al1 gem102v4 ncib64c9 mrvwc6qr sx8pxkcf f597kf1v cpcgwwas m2nijcs8 hxfwr5lz k1z55t6l oog5qr5w innypi6y rtxb060y')])[6]"));
-        return favourites.getAttribute("class");
+        return favourites.isDisplayed();
     }
-    public String verifyWatchVideosField() {
+    public boolean verifyWatchVideosField() {
         watchVideo = driver.findElement(By.xpath("(//span[contains(@class,'gvxzyvdx aeinzg81 t7p7dqev gh25dzvf exr7barw b6ax4al1 gem102v4 ncib64c9 mrvwc6qr sx8pxkcf f597kf1v cpcgwwas m2nijcs8 hxfwr5lz k1z55t6l oog5qr5w tpi2lg9u pbevjfx6 ztn2w49o')])[9]"));
-        return watchVideo.getAttribute("class");
+        return watchVideo.isEnabled();
     }
-    public String verifyGamingField() {
+    public boolean verifyGamingField() {
         gaming = driver.findElement(By.xpath("(//span[contains(@class,'gvxzyvdx aeinzg81 t7p7dqev gh25dzvf exr7barw b6ax4al1 gem102v4 ncib64c9 mrvwc6qr sx8pxkcf f597kf1v cpcgwwas m2nijcs8 hxfwr5lz k1z55t6l oog5qr5w tpi2lg9u pbevjfx6 ztn2w49o')])[10]"));
-        return gaming.getAttribute("class");
+        return gaming.isEnabled();
     }
-    public String verifyBloodDonationField() {
+    public boolean verifyBloodDonationField() {
         bloodDonation = driver.findElement(By.xpath("(//span[contains(@class,'gvxzyvdx aeinzg81 t7p7dqev gh25dzvf exr7barw b6ax4al1 gem102v4 ncib64c9 mrvwc6qr sx8pxkcf f597kf1v cpcgwwas m2nijcs8 hxfwr5lz k1z55t6l oog5qr5w tpi2lg9u pbevjfx6 ztn2w49o')])[19]"));
-        return bloodDonation.getAttribute("class");
+        return bloodDonation.isEnabled();
     }
 }
